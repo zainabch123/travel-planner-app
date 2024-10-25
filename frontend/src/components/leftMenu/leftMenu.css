@@ -1,0 +1,54 @@
+.left-menu {
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.left-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.left-menu a:hover {
+  color: rgb(55, 193, 231);
+}
+
+.left-menu h2:focus {
+  color: rgb(55, 193, 231);
+}
+
+.left-menu a:focus {
+  color: rgb(55, 193, 231);
+  font-weight: 600;
+}
+
+.trip-summary {
+  font-size: 0.9rem;  
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: rgba(240, 248, 255, 0.8);  
+  border-radius: 5px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  color: #333;  
+}
+
+
+.trip-summary span {
+  display: flex;
+  align-items: center;
+  padding-left: 7px; 
+  border-left: 1px solid rgba(150, 150, 150, 0.5); 
+}
+
+.trip-summary span:first-child {
+  border-left: none;
+  padding-left: 0; 
+}
+
+.trip-summary span:last-child {
+  padding-right: 0; 
+}
