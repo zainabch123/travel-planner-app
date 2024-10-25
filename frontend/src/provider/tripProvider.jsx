@@ -1,10 +1,9 @@
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
-import { da } from "date-fns/locale";
-
 import TripContext from "../context/trip";
 
+// eslint-disable-next-line react/prop-types
 const TripProvider = ({ children }) => {
   const { token, user } = useAuth();
   const apiUrl = import.meta.env.VITE_API_URL;
