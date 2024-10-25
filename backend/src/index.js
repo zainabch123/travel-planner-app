@@ -16,18 +16,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //Add routers below:
-// import userRouter from "./routes/user.js";
-// app.use("/user", userRouter);
+import userRouter from "./routes/user.js";
+app.use("/user", userRouter);
 
-// import tripsRouter from "./routes/trips.js";
-// app.use("/trips", tripsRouter);
+import tripsRouter from "./routes/trips.js";
+app.use("/trips", tripsRouter);
 
-// import tripAdvisorApiRouter from "./routes/api.js";
-// app.use("/api", tripAdvisorApiRouter);
-
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+import tripAdvisorApiRouter from "./routes/api.js";
+app.use("/api", tripAdvisorApiRouter);
 
 
 // Set up a default "catch all" route to use when someone visits a route
@@ -37,7 +33,7 @@ app.get("*", (req, res) => {
 });
 
 // Start our API server
-const port = process.env.VITE_PORT;
+const port = process.env.VITE_PORT || 3000;
 app.listen(port, () => {
   console.log(`\n Server is running on http://localhost:${port}\n`);
 });
