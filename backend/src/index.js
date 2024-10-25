@@ -16,14 +16,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //Add routers below:
-import userRouter from "./routes/user.js";
-app.use("/user", userRouter);
+// import userRouter from "./routes/user.js";
+// app.use("/user", userRouter);
 
-import tripsRouter from "./routes/trips.js";
-app.use("/trips", tripsRouter);
+// import tripsRouter from "./routes/trips.js";
+// app.use("/trips", tripsRouter);
 
-import tripAdvisorApiRouter from "./routes/api.js";
-app.use("/api", tripAdvisorApiRouter);
+// import tripAdvisorApiRouter from "./routes/api.js";
+// app.use("/api", tripAdvisorApiRouter);
 
 
 // Set up a default "catch all" route to use when someone visits a route
