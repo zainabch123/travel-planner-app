@@ -12,3 +12,88 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+
+enum Type {
+  HOTEL
+  ATTRACTION
+  RESTAURANT
+  ACTIVITY
+}
+
+model User {
+  id Int @id @default(autoincrement())
+  username String @unique
+  password String
+  firstName String
+  lastName  String
+  trips     Trips[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Hotels {
+  id Int @id @default(autoincrement())
+  name    String
+  type    Type @default(HOTEL)
+  address String
+  city    String
+  country String
+  imageUrl String
+  rating   Int
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Attractions {
+  id Int @id @default(autoincrement())
+  name    String
+  type    Type @default(ATTRACTION)
+  address String
+  city    String
+  country String
+  imageUrl String
+  rating   Int
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Activities {
+  id Int @id @default(autoincrement())
+  name    String
+  type    Type @default(ACTIVITY)
+  address String
+  city    String
+  country String
+  imageUrl String
+  rating   Int
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Trips {
+  id Int @id @default(autoincrement())
+  name    String
+  location String
+  startDate DateTime
+  endDate   DateTime
+  imgUrl    String?
+  user      User @relation(fields: [userId], references: [id])
+  userId    Int   
+  tripItems TripItem[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model TripItem {
+  id Int @id @default(autoincrement())
+  name String
+  description String?
+  imgUrl      String?
+  rating      String?
+  category    String?
+  trip        Trips    @relation(fields: [tripId], references: [id])
+  tripId      Int
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
