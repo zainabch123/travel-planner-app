@@ -11,6 +11,8 @@ const getTravelData = async (req, res) => {
       `https://api.content.tripadvisor.com/api/v1/location/search?${tripAdvisorApiKey}&language=en&searchQuery=${searchQuery}&category=${category}`
     );
      const data = await locationsResponse.json();
+
+     console.log("data", data);
      const locations = data.data;
 
      const fetchLocationDetails = locations.map(async (location) => {
