@@ -9,7 +9,16 @@ import cors from "cors";
 // Set up express
 const app = express();
 app.disable("x-powered-by");
-app.use(cors());
+// app.use(cors());
+
+app.use(
+  cors({
+    origin: ["https://travel-planner-app-backend.vercel.app"],
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+  })
+);
+
 // Tell express to use a JSON parser middleware
 app.use(express.json());
 // Tell express to use a URL Encoding middleware
