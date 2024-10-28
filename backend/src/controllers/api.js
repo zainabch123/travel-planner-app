@@ -2263,51 +2263,67 @@ const getTravelData = async (req, res) => {
     },
   ];
 
-
   try {
-    
     const locationsResponse = await fetch(
-      `https://api.content.tripadvisor.com/api/v1/location/search?${tripAdvisorApiKey}&language=en&searchQuery=${searchQuery}&category=${category}`
+      `https://api.content.tripadvisor.com/api/v1/location/search?${tripAdvisorApiKey}&language=en&searchQuery=${searchQuery}&category=${category}`,
+      {
+        method: "GET",
+        headers: {
+          Referer: "https://my-travel-planner-app.vercel.app",
+        },
+      }
     );
-     const data = await locationsResponse.json();
+    const data = await locationsResponse.json();
 
-     const locations = data.data;
+    const locations = data.data;
 
-     const fetchLocationDetails = locations.map(async (location) => {
+    const fetchLocationDetails = locations.map(async (location) => {
       const detailsResponse = await fetch(
-        `https://api.content.tripadvisor.com/api/v1/location/${location.location_id}/details?${tripAdvisorApiKey}`
+        `https://api.content.tripadvisor.com/api/v1/location/${location.location_id}/details?${tripAdvisorApiKey}`,
+        {
+          method: "GET",
+          headers: {
+            Referer: "https://my-travel-planner-app.vercel.app",
+          },
+        }
       );
+
       const detailData = await detailsResponse.json();
       const description = detailData.description;
-      const rating  = detailData.rating;
+      const rating = detailData.rating;
       const category = detailData.category;
 
-        const imagesResponse = await fetch(
-          `https://api.content.tripadvisor.com/api/v1/location/${location.location_id}/photos?${tripAdvisorApiKey}&language=en`
-        );
-        const imgData = await imagesResponse.json();
-        const images = imgData.data;
+      const imagesResponse = await fetch(
+        `https://api.content.tripadvisor.com/api/v1/location/${location.location_id}/photos?${tripAdvisorApiKey}&language=en`,
+        {
+          method: "GET",
+          headers: {
+            Referer: "https://my-travel-planner-app.vercel.app",
+          },
+        }
+      );
 
-        console.log(images)
+      const imgData = await imagesResponse.json();
+      const images = imgData.data;
 
-       // Merge data arrays:
-       return { ...location, description, rating, category, images };
-     });
+      console.log(images);
 
-       const locationsWithDetails = await Promise.all(fetchLocationDetails);
+      // Merge data arrays:
+      return { ...location, description, rating, category, images };
+    });
+
+    const locationsWithDetails = await Promise.all(fetchLocationDetails);
 
     return res.status(200).json({
       data: locationsWithDetails,
     });
   } catch (error) {
     console.log("error", error);
-     return res
-       .status(500)
-       .json({
-         error: false,
-         data: backupData,
-         message: "An error occurred while fetching travel data.",
-       });
+    return res.status(500).json({
+      error: false,
+      data: backupData,
+      message: "An error occurred while fetching travel data.",
+    });
   }
 };
 
