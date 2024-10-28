@@ -30,8 +30,6 @@ const Login = () => {
         });
 
         const data = await res.json();
-
-        console.log("data frontend", data )
     
         if (data.token) {
           login(data.token, data.user);
