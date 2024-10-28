@@ -32,7 +32,7 @@
 }
 
 .planned-trips {
-  margin: 10px 20px 20px 0px;
+  margin: 20px 20px 20px 0px;
 }
 
 .trip-cards {
@@ -48,7 +48,7 @@
   background-color: white;
   border-radius: 8px;
   list-style: none;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
