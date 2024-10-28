@@ -65,10 +65,14 @@ const Header = () => {
           value={searchInput || ""}
           onChange={handleInput}
         ></input>
-        <button id="search-query-submit" type="button" onClick={handleSubmit}>
-          {loading ? <div className="spinner"></div> : "Search"}
-        </button>
-        
+        {loading ? (
+        <button id="loading-button" type="button" >
+          <div className="spinner"></div>
+          </button> ) : (
+            <button id="search-query-submit" type="button" onClick={handleSubmit}>Search
+            </button>
+          )
+        }
       </div>
       {user && (
         <div className="profile-circle" onClick={handleOnClickProfile}>
