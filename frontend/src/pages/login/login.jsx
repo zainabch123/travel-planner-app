@@ -8,7 +8,10 @@ const Login = () => {
   const { apiUrl } = useTrip();
   const { login } = useAuth();
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({ username: "", password: "" });
+  const [formData, setFormData] = useState({
+    username: "testEmail12@gmail.com",
+    password: "testPassword",
+  });
   const [error, setError] = useState(null);
 
   function handleInput(event) {
