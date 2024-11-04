@@ -84,10 +84,6 @@ const TripProvider = ({ children }) => {
       }
 
       setTripData(data.data);
-      // localStorage.setItem(
-      //   "hotels in paris",
-      //   JSON.stringify(data.data)
-      // );
       return tripData;
 
       // For DEMO: 

@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import useTrip from "../../hooks/useTrip";
 import useAuth from "../../hooks/useAuth";
