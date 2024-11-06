@@ -1,4 +1,3 @@
-import { getTravelDataDb } from "../domains/api.js";
 
 const getTravelData = async (req, res) => {
   const searchQuery = req.query.searchQuery;
