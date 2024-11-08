@@ -1,41 +1,20 @@
 .header {
-  grid-column: 1 / span 3;
+  grid-column: 2 / span 3;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr 80px;
   align-items: center;
-}
-
-.travel-planner-logo {
-  text-align: left;
-  margin-left: 25px;
-  display: grid;
-  grid-template-columns: 40px auto;
-  justify-items: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.travel-planner-logo h1 {
-  margin: 20px 20px 20px 0px;
-  color: black;
-  /* text-shadow: 0 6px 30px rgba(0, 0, 0, 0.3); */
-}
-
-.travel-planner-logo svg {
-  width: 100%;
-  fill: black;
 }
 
 .search-bar-wrapper {
-  flex: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:center;
   margin: 0 30px;
 }
 
 #search-bar {
-  flex-grow: 1;
+  width: 100%;
+  max-width: 1000px;
   padding: 13px;
   margin: 0 10px;
   border-color: white;
