@@ -2318,11 +2318,11 @@ const getTravelData = async (req, res) => {
     });
   } catch (error) {
     console.log("error", error);
-    return res.status(500).json({
-      error: false,
-      data: backupData,
-      message: "An error occurred while fetching travel data.",
-    });
+    // return res.status(500).json({
+    //   error: false,
+    //   data: backupData,
+    //   message: "An error occurred while fetching travel data.",
+    // });
   }
 };
 

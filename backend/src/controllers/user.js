@@ -1,6 +1,6 @@
 import { registerUserDb, loginUserDb } from "../domains/user.js";
 import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
+import bcrypt, { compareSync } from "bcrypt";
 import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 const secret = process.env.JWT_SECRET;
 
