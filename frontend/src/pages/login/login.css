@@ -1,6 +1,7 @@
 .login-page {
   height: 100vh;
-  background: linear-gradient(135deg, rgb(55, 193, 231),  rgb(55, 193, 231, 0.4), rgb(55, 193, 231, 0.1));
+  /* background: linear-gradient(135deg, rgb(143, 219, 240), white); */
+  background: linear-gradient(to bottom, #89CFF0, white);
   background-size: 400% 400%; 
   animation: gradientAnimation 13s ease infinite;
   display: flex;
