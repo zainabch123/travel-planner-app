@@ -1,16 +1,12 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import useTrip from "../../hooks/useTrip";
-import useAuth from "../../hooks/useAuth";
+
 
 
 import './leftMenu.css'
 
 const LeftMenu = () => {
       const { plannedTrips } = useTrip();
-      const { user, logout } = useAuth();
-      const [isVisible, setIsVisible] = useState(false);
-
 
       const countTripItems = (tripItems) => {
         if (!tripItems) return { hotels: 0, attractions: 0, restaurants: 0 };
@@ -28,10 +24,6 @@ const LeftMenu = () => {
 
         return { hotels, attractions, restaurants };
       };
-
-       const handleOnClickProfile = () => {
-         setIsVisible(!isVisible);
-       };
 
   return (
     <aside className="left-menu">
