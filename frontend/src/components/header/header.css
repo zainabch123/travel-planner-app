@@ -1,18 +1,42 @@
 .header {
-  grid-column: 2 / span 3;
+  grid-column: 1 / span 3;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
+  background:  rgb(55, 193, 231, 0.5);
+}
+
+.travel-planner-logo {
+  text-align: left;
+  margin-left: 25px;
+  display: grid;
+  grid-template-columns: 40px auto;
+  justify-items: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.travel-planner-logo h1 {
+  margin: 20px 20px 20px 0px;
+  color: black;
+  /* text-shadow: 0 6px 30px rgba(0, 0, 0, 0.3); */
+}
+
+.travel-planner-logo svg {
+  width: 100%;
+  fill: black;
 }
 
 .search-bar-wrapper {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0 30px;
 }
 
 #search-bar {
-  width: 100%;
-  
+  flex-grow: 1;
   padding: 13px;
   margin: 0 10px;
   border-color: white;
@@ -26,7 +50,7 @@
 
 #search-query-submit {
   width: 67px;
-  margin: 20px 25px 20px 0px;
+  margin: 20px 0px 20px 0px;
   border-radius: 20px;
   padding: 12px 13px;
   cursor: pointer;
@@ -41,6 +65,51 @@
 #search-query-submit:hover {
   background-color: rgb(55, 193, 231, 0.7);
   color: white;
+}
+
+.profile-circle {
+  display: grid;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  margin-right: 25px;
+  margin-left: 20px;
+  justify-self: end;
+  background-color: white;
+  align-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.profile-circle:hover {
+  background-color: rgb(55, 193, 231, 0.7);
+  color: white;
+}
+
+.profile-circle p {
+  font-size: 25px;
+}
+
+.user-panel {
+  position: absolute;
+  right: 50px;
+  top: 70px;
+  z-index: 10;
+  min-width: fit-content;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.user-panel a {
+  text-decoration: none;
+  color: black;
+}
+
+.user-panel p {
+  margin: 10px;
+  font-size: 18px;
 }
 
 #loading-button {
