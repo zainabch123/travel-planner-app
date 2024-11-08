@@ -11,29 +11,18 @@ const app = express();
 app.disable("x-powered-by");
 // app.use(cors());
 
-// CORS Configuration
-const allowedOrigins = [
-  "http://localhost:5173", // Local development
-  "https://my-travel-planner-app.vercel.app", // Production
-  "https://travel-planner-app-backend.vercel.app", // Backend (if it's used directly)
-  // Add any other production domains here if needed
-];
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173", 
+      "https://my-travel-planner-app.vercel.app",
+      "https://travel-planner-app-backend.vercel.app",
+    ],
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+  })
+);
 
-app.use((req, res, next) => {
-  const origin = req.headers.origin;
-  
-  // Check if the origin of the request is in the allowedOrigins array
-  if (allowedOrigins.includes(origin)) {
-    res.setHeader("Access-Control-Allow-Origin", origin); // Allow the origin if it's in the list
-  }
-  
-  // Set common CORS headers
-  res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,PUT,PATCH,POST,DELETE");
-  res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-  res.setHeader("Access-Control-Allow-Credentials", "true");
-
-  next();
-});
 
 
 // Tell express to use a JSON parser middleware
