@@ -11,19 +11,19 @@ const app = express();
 app.disable("x-powered-by");
 // app.use(cors());
 
-app.use(
-  cors({
-    origin: [
-      "http://localhost:5173", 
-      "https://my-travel-planner-app.vercel.app",
-      "https://travel-planner-app-backend.vercel.app",
-    ],
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: [
+//       "http://localhost:5173", 
+//       "https://my-travel-planner-app.vercel.app",
+//       "https://travel-planner-app-backend.vercel.app",
+//     ],
+//     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//     credentials: true,
+//   })
+// );
 
-app.use(cors({ origin: "*" }));
+
 
 // Tell express to use a JSON parser middleware
 app.use(express.json());
