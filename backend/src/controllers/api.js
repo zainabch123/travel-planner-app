@@ -2274,6 +2274,10 @@ const getTravelData = async (req, res) => {
     );
     const data = await locationsResponse.json();
 
+    if (data.message) {
+      throw Error;
+    }
+
 
     return res.status(200).json({
       data: data,
