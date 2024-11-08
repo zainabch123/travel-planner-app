@@ -24,7 +24,7 @@ app.use(
 );
 
 
-
+app.options("*", cors());
 // Tell express to use a JSON parser middleware
 app.use(express.json());
 // Tell express to use a URL Encoding middleware
