@@ -32,7 +32,6 @@
 }
 
 .planned-trips {
-  margin: 20px 20px 20px 0px;
 }
 
 .trip-cards {
@@ -53,7 +52,6 @@
 }
 
 .trip-card:hover {
-  transform: translateY(-10px);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 

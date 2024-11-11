@@ -1,34 +1,13 @@
 .left-menu {
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 3;
   display: grid;
-  grid-template-rows: 60px 1fr;
   background-color: white;
-  margin: 20px 20px 20px 20px;
+  margin: 0px 20px 20px 20px;
   border-radius: 10px;
-  padding: 20px;
+  padding: 0px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.travel-planner-logo {
-  text-align: left;
-  display: grid;
-  grid-template-columns: 50px 180px;
-  justify-items: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.travel-planner-logo h1 {
-  margin: 10px 10px 10px 0px;
-  color: black;
-  font-size: 1.8rem;
-  /* text-shadow: 0 6px 30px rgba(0, 0, 0, 0.3); */
-}
-
-.travel-planner-logo svg {
-  width: 100%;
-  fill: black;
-}
 
 .left-menu a {
   text-decoration: none;
@@ -37,6 +16,10 @@
 
 .left-menu a:hover {
   color: rgb(55, 193, 231);
+}
+
+.left-menu h2 {
+  font-size: 1.3rem;
 }
 
 .left-menu h2:focus {
@@ -49,7 +32,7 @@
 }
 
 .trip-summary {
-  font-size: 0.9rem;  
+  font-size: 0.8rem;  
   margin-top: 5px;
   padding: 5px 10px;
   background-color: rgba(240, 248, 255, 0.8);  
@@ -57,6 +40,7 @@
   display: flex;
   gap: 5px;
   align-items: center;
+  text-align: center;
   color: #333;  
 }
 
@@ -74,6 +58,6 @@
 }
 
 .trip-summary span:last-child {
-  padding-right: 0; 
+  padding-right: 0px; 
 }
 

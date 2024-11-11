@@ -4,7 +4,6 @@
   padding: 0px;
   font-family: "Geist";
   font-weight: 400;
-  
 }
 
 h1 {
@@ -18,7 +17,7 @@ h2 {
   height: 100vh;
   display: grid; 
   grid-template-columns: 315px 1fr;
-  grid-template-rows: 80px 1fr;
+  grid-template-rows: 65px 1fr;
   background:  white;
 }
 
