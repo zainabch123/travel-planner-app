@@ -100,7 +100,7 @@ const Dashboard = () => {
                       )}
                     </div>
                     <button onClick={() => navigate(`/viewTrip/${trip.id}`)}>
-                      View Details
+                      View More
                     </button>
                   </li>
                 );
@@ -118,11 +118,11 @@ const Dashboard = () => {
 
       {showModal && (
         <div className="modal-overlay">
+          <button className="close-modal" onClick={closeModal}>
+            x
+          </button>
           <div className="modal">
             <form onSubmit={handleSubmit}>
-              <button className="close-modal" onClick={closeModal}>
-                x
-              </button>
               <h2>Add New Trip</h2>
               <label htmlFor="name">Name</label>
               <input
