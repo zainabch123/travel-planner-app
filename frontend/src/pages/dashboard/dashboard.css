@@ -47,7 +47,7 @@
   background-color: white;
   border-radius: 8px;
   list-style: none;
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(238, 238, 238);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
