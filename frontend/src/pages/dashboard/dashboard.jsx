@@ -74,7 +74,11 @@ const Dashboard = () => {
               {plannedTrips.map((trip, index) => {
                 const daysRemaining = calculateDaysRemaining(trip.startDate);
                 return (
-                  <li key={index} className="trip-card">
+                  <li
+                    key={index}
+                    className="trip-card"
+                    onClick={() => navigate(`/viewTrip/${trip.id}`)}
+                  >
                     {trip.imgUrl ? (
                       <img src={trip.imgUrl} alt="Trip Image" />
                     ) : (
@@ -92,16 +96,14 @@ const Dashboard = () => {
                           ? format(new Date(trip.endDate), "dd-MM-yyyy")
                           : ""}
                       </p>
-                      {daysRemaining !== null && (
+                      {/* {daysRemaining !== null && (
                         <p className="days-remaining">
                           {daysRemaining} day{daysRemaining !== 1 ? "s" : ""}{" "}
                           left until the trip!
                         </p>
-                      )}
+                      )} */}
                     </div>
-                    <button onClick={() => navigate(`/viewTrip/${trip.id}`)}>
-                      View More
-                    </button>
+                    
                   </li>
                 );
               })}

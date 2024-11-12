@@ -63,9 +63,8 @@ const ViewTrip = () => {
   return (
     <div className="trip-page">
       <div className="trip-wrapper">
-        <h1>{tripData.name}</h1>
         <div className="trip-details-section">
-          <h2>Trip Details</h2>
+          <h1>{tripData.name}</h1>
           <div className="trip-image">
             <img src={tripData.imgUrl} alt="Trip Image" />
           </div>
