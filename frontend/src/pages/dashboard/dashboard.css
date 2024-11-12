@@ -2,6 +2,7 @@
   overflow: scroll;
   overflow-x: hidden;
   position: relative;
+
 }
 
 .planned-trips-wrapper {
@@ -44,16 +45,15 @@
 .trip-card {
   position: relative;
   display: grid;
-  background-color: white;
+  background-color: rgb(245, 245, 245, 0.4);
   border-radius: 8px;
   list-style: none;
-  border: 1px solid rgb(238, 238, 238);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .trip-card:hover {
-  background-color: rgb(245, 245, 245, 0.8);
+  background-color: rgba(220, 220, 220, 0.3);
 }
 
 .trip-card img {
