@@ -2,7 +2,8 @@
   grid-column: 1 / span 3;
   display: grid;
   grid-template-columns: 210px 1fr 100px;
-  grid-template-rows: 65px;
+  padding: 8px 0px 0px 0px;
+  grid-template-rows: auto;
   align-items: center;
 }
 

@@ -1,11 +1,11 @@
 .left-menu {
   grid-row: 2 / span 3;
   display: grid;
-  margin: 0px 20px 20px 20px;
+  margin: 10px 20px 20px 20px;
   border-radius: 10px;
   padding: 0px 20px;
-  border: 1px solid rgb(238, 238, 238);
 }
+
 
 
 .left-menu a {
@@ -24,6 +24,7 @@
 .left-menu h2:focus {
   color: rgb(55, 193, 231);
 }
+
 
 .left-menu a:focus {
   color: rgb(55, 193, 231);

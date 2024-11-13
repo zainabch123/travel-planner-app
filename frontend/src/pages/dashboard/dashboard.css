@@ -2,6 +2,7 @@
   overflow: scroll;
   overflow-x: hidden;
   position: relative;
+  margin-top: 10px;
 
 }
 
@@ -45,15 +46,15 @@
 .trip-card {
   position: relative;
   display: grid;
-  background-color: rgb(245, 245, 245, 0.4);
-  border-radius: 8px;
+  border-radius: 12px;
   list-style: none;
   cursor: pointer;
+  background-color: rgb(245, 245, 245, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .trip-card:hover {
-  background-color: rgba(220, 220, 220, 0.3);
+  background-color: rgb(245, 245, 245, 0.7);
 }
 
 .trip-card img {
