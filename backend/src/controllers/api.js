@@ -3,7 +3,7 @@ const getTravelData = async (req, res) => {
   const category = req.query.category;
   const tripAdvisorApiKey = process.env.TRIPADVISOR_API_KEY;
 
-    const backupData = [
+  const backupData = [
     {
       location_id: "187497",
       name: "Barcelona",
@@ -2261,7 +2261,6 @@ const getTravelData = async (req, res) => {
     },
   ];
 
-
   try {
     const locationsResponse = await fetch(
       `https://api.content.tripadvisor.com/api/v1/location/search?${tripAdvisorApiKey}&language=en&searchQuery=${searchQuery}&category=${category}`,
@@ -2277,7 +2276,6 @@ const getTravelData = async (req, res) => {
     if (data.Message) {
       throw new Error(data.Message);
     }
-
 
     return res.status(200).json({
       data: data,

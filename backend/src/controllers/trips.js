@@ -62,7 +62,7 @@ const getUsersTrips = async (req, res) => {
 const getTripById = async (req, res) => {
   const tripId = Number(req.params.id);
 
-  console.log("tripId", tripId)
+  console.log("tripId", tripId);
 
   if (!tripId) {
     return res.status(400).json({ error: "Trip ID is required" });
