@@ -32,7 +32,7 @@ const addNewTrip = async (req, res) => {
     const newTrip = await addNewTripDb(newTripData, userId);
     return res.status(201).json({ trip: newTrip });
   } catch (e) {
-    console.log("error", e);
+    console.log("Error", e);
     return res.status(500).json({ error: "Unable to add new trip" });
   }
 };
