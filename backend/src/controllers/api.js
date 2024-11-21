@@ -2284,11 +2284,11 @@ const getTravelData = async (req, res) => {
       data: data,
     });
   } catch (error) {
-    console.log( error.stack);
+    console.log( error);
     return res.status(500).json({
       // error: false,
       // data: backupData,
-      message: "An error occurred while fetching travel data.",
+      message: "An error occurred while fetching travel data. Please try again",
     });
   }
 };
