@@ -2286,7 +2286,7 @@ const getTravelData = async (req, res) => {
   } catch (error) {
     console.log("Error:", error);
     return res.status(500).json({
-      error: error,
+      error: "Hi There",
       // data: backupData,
       // message: "An error occurred while fetching travel data.",
     });
