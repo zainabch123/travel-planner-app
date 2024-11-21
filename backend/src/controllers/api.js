@@ -2273,9 +2273,12 @@ const getTravelData = async (req, res) => {
     );
     const data = await locationsResponse.json();
 
+    console.log("data backend", data)
+
     if (data.Message) {
       throw new Error(data.Message);
     }
+
 
     return res.status(200).json({
       data: data,
@@ -2283,9 +2286,9 @@ const getTravelData = async (req, res) => {
   } catch (error) {
     console.log("Error:", error);
     return res.status(500).json({
-      error: false,
-      data: backupData,
-      message: "An error occurred while fetching travel data.",
+      error: error,
+      // data: backupData,
+      // message: "An error occurred while fetching travel data.",
     });
   }
 };

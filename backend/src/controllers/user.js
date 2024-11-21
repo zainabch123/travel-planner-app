@@ -58,7 +58,7 @@ const loginUser = async (req, res) => {
 
         const token = jwt.sign({ id: foundUser.id }, secret);
         delete foundUser.password;
-        console.log("foundUser", foundUser)
+        console.log("foundUser right here", foundUser)
        return res.status(200).json({ user: foundUser, token });
 
     } catch(e) {
