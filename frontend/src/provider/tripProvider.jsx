@@ -76,10 +76,19 @@ const TripProvider = ({ children }) => {
   const fetchTravelData = async (searchInput) => {
     setSearchError(null);
     try {
-      const res = await fetch(`${apiUrl}/api/search?searchQuery=${searchInput}`);
+      const res = await fetch(
+        `${apiUrl}/api/search?searchQuery=${searchInput}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        }
+      );
       const data = await res.json();
 
-      console.log(data.data.data)
+      console.log(data)
 
       if (data.error) {
         throw new Error(data.error);
@@ -93,7 +102,8 @@ const TripProvider = ({ children }) => {
       // setTripData(storedData);
       // return tripData;
     } catch (error) {
-      setSearchError(error.message || "Unable to fetch travel data");
+      console.log(error)
+      setSearchError(error.error || "Unable to fetch travel data");
       navigate("/search");
     }
   };

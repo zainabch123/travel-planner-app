@@ -13,7 +13,11 @@ app.disable("x-powered-by");
 
 app.use(
   cors({
-    origin: "*",
+    origin: [
+      "http://localhost:5173", 
+      "https://my-travel-planner-app.vercel.app",
+      "https://travel-planner-app-backend.vercel.app",
+    ],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   })
