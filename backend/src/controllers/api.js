@@ -1,4 +1,5 @@
 const getTravelData = async (req, res) => {
+   console.log("Received request:", req.query);
   const searchQuery = req.query.searchQuery;
   const category = req.query.category;
   const tripAdvisorApiKey = process.env.TRIPADVISOR_API_KEY;
