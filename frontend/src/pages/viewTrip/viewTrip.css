@@ -8,7 +8,8 @@
   border-radius: 12px;
   display: grid;
   grid-template-rows: 50px fit-content fit-content fit-content;
-  background-color: rgb(245, 245, 245, 0.4);
+  background-color: rgb(245, 245, 245, 0.9);
+
 
 }
 

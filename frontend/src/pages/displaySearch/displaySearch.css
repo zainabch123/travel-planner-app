@@ -21,16 +21,16 @@
 .data-card {
     display: grid;
     grid-template-columns: minmax(200px, 350px) minmax(200px, 400px) auto;
-    background-color: white;
+    background-color: rgb(245, 245, 245, 0.5);
     list-style: none;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     position: relative;
     cursor: pointer;
 }
 
 .data-card:hover {
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); 
+    background-color: rgb(228, 227, 227, 0.4);
+
 }
 
 .card-img {
@@ -67,7 +67,6 @@
   width: 140px;
   border: none;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .card-buttons button:hover {

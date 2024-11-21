@@ -49,12 +49,12 @@
   border-radius: 12px;
   list-style: none;
   cursor: pointer;
-  background-color: rgb(245, 245, 245, 0.3);
+  background-color: rgb(245, 245, 245, 0.7);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .trip-card:hover {
-  background-color: rgb(245, 245, 245, 0.7);
+ background-color: rgb(228, 227, 227, 0.5);
 }
 
 .trip-card img {
