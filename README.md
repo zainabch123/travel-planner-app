@@ -1,5 +1,5 @@
 
-### Travel Planner App
+# Travel Planner App
 
 Inspired by my own travel planning experiences, this app is designed to streamline and digitize the travel planning process. Part of main functionailty of the app includes: 
 

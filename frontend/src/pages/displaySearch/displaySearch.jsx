@@ -13,6 +13,8 @@ const DisplaySearch = () => {
 
   const scrollableRef = useRef(null);
 
+  console.log("tripData", tripData)
+
   useEffect(() => {
     // Scroll to the top of the container whenever tripData changes
     if (scrollableRef.current) {

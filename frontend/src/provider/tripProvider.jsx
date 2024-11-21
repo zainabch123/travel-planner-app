@@ -79,11 +79,13 @@ const TripProvider = ({ children }) => {
       const res = await fetch(`${apiUrl}/api/search?searchQuery=${searchInput}`);
       const data = await res.json();
 
+      console.log(data.data.data)
+
       if (data.error) {
         throw new Error(data.error);
       }
 
-      setTripData(data.data);
+      setTripData(data.data.data);
       return tripData;
 
       // For DEMO: 
