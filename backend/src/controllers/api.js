@@ -1,5 +1,4 @@
 const getTravelData = async (req, res) => {
-   console.log("Received request:", req.query);
   const searchQuery = req.query.searchQuery;
   const category = req.query.category;
   const tripAdvisorApiKey = process.env.TRIPADVISOR_API_KEY;
@@ -2274,8 +2273,6 @@ const getTravelData = async (req, res) => {
     );
     const data = await locationsResponse.json();
 
-    console.log("data backend", data)
-
     if (data.Message) {
       throw new Error(data.Message);
     }
@@ -2287,9 +2284,9 @@ const getTravelData = async (req, res) => {
   } catch (error) {
     console.log( error);
     return res.status(500).json({
-      // error: false,
-      // data: backupData,
-      message: "An error occurred while fetching travel data. Please try again",
+      error: false,
+      data: backupData,
+      // message: "An error occurred while fetching travel data. Please try again",
     });
   }
 };
