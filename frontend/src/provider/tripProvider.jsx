@@ -88,16 +88,17 @@ const TripProvider = ({ children }) => {
       );
       const data = await res.json();
 
-      console.log(data)
+      console.log(data);
 
       if (data.error) {
         throw new Error(data.error);
       }
 
-      setTripData(data.data.data);
+      // setTripData(data.data.data);
+      setTripData(data.data);
       return tripData;
 
-      // For DEMO: 
+      // For DEMO:
       // const storedData = JSON.parse(localStorage.getItem("data"));
       // setTripData(storedData);
       // return tripData;
