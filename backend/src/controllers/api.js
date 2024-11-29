@@ -2288,7 +2288,7 @@ const getTravelData = async (req, res) => {
   //     data: backupData,
   //     // message: "An error occurred while fetching travel data. Please try again",
   //   });
-  // }
+  }
 };
 
 // const getTravelData = async (req, res) => {
