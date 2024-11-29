@@ -51,7 +51,7 @@ color: rgb(55, 193, 231);
 .trip-summary span {
   display: flex;
   align-items: center;
-  padding-left: 7px; 
+  padding-left: 8px; 
   border-left: 1px solid rgba(150, 150, 150, 0.5); 
 }
 
