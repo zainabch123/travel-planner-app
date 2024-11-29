@@ -2267,7 +2267,7 @@ const getTravelData = async (req, res) => {
       {
         method: "GET",
         headers: {
-          Referer: "https://my-travel-planner-app.vercel.app",
+          Referer: "https://travel-planner-app-backend.vercel.app",
         },
       }
     );
