@@ -2283,9 +2283,6 @@ const getTravelData = async (req, res) => {
     });
   } catch (error) {
     console.log( error);
-    return res.status(500).json({
-      error: error
-    })
   //   return res.status(500).json({
   //     error: false,
   //     data: backupData,
