@@ -14,7 +14,7 @@ app.disable("x-powered-by");
 app.use(
   cors({
     origin: [
-      "http://localhost:5173", 
+      "http://localhost:5173",
       "https://my-travel-planner-app.vercel.app",
       "https://travel-planner-app-backend.vercel.app",
     ],
@@ -22,8 +22,6 @@ app.use(
     credentials: true,
   })
 );
-
-
 
 // Tell express to use a JSON parser middleware
 app.use(express.json());
@@ -39,7 +37,6 @@ app.use("/trips", tripsRouter);
 
 import tripAdvisorApiRouter from "./routes/api.js";
 app.use("/api", tripAdvisorApiRouter);
-
 
 // Set up a default "catch all" route to use when someone visits a route
 // that we haven't built
