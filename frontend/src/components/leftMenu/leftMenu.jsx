@@ -1,27 +1,24 @@
 import { Link } from "react-router-dom";
 import useTrip from "../../hooks/useTrip";
 
-import './leftMenu.css'
+import "./leftMenu.css";
 
 const LeftMenu = () => {
-      const { plannedTrips } = useTrip();
+  const { plannedTrips } = useTrip();
 
-      const countTripItems = (tripItems) => {
-        if (!tripItems) return { hotels: 0, attractions: 0, restaurants: 0 };
+  const countTripItems = (tripItems) => {
+    if (!tripItems) return { hotels: 0, attractions: 0, restaurants: 0 };
 
-        const hotels = tripItems.filter(
-          (item) => item.category === "hotel"
-        ).length;
-        const attractions = tripItems.filter(
-          (item) =>
-            item.category === "attraction" || item.category === "geographic"
-        ).length;
-        const restaurants = tripItems.filter(
-          (item) => item.category === "restaurant"
-        ).length;
+    const hotels = tripItems.filter((item) => item.category === "hotel").length;
+    const attractions = tripItems.filter(
+      (item) => item.category === "attraction" || item.category === "geographic"
+    ).length;
+    const restaurants = tripItems.filter(
+      (item) => item.category === "restaurant"
+    ).length;
 
-        return { hotels, attractions, restaurants };
-      };
+    return { hotels, attractions, restaurants };
+  };
 
   return (
     <aside className="left-menu">
