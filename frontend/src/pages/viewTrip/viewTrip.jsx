@@ -4,61 +4,59 @@ import useTrip from "../../hooks/useTrip";
 import useAuth from "../../hooks/useAuth";
 import { format } from "date-fns";
 
-
 import "./viewTrip.css";
 
 const ViewTrip = () => {
   const { id } = useParams();
   const { token } = useAuth();
-  const {apiUrl} = useTrip();
-  const [tripData, setTripData] = useState({ tripItems: []});
+  const { apiUrl } = useTrip();
+  const [tripData, setTripData] = useState({ tripItems: [] });
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-
-   const limitText = (text, maxLength) => {
-     if (text.length > maxLength) {
-       return text.substring(0, maxLength) + "...";
-     }
-     return text;
-   };
-
-   useEffect(() => {
-     const fetchTripItems = async () => {
-       try {
-         const res = await fetch(`${apiUrl}/trips/view/${id}`, {
-           method: "GET",
-           headers: {
-             "Content-Type": "application/json",
-             Authorization: `Bearer ${token}`,
-           },
-         });
-
-         const data = await res.json();
-
-         if (data.error) {
-           throw new Error(data.error);
-         }
-
-         setTripData(data.trip);
-       } catch (error) {
-         setError(error.message || "Unable to fetch travel data");
-       } finally {
-         setIsLoading(false);
-       };
+  const limitText = (text, maxLength) => {
+    if (text.length > maxLength) {
+      return text.substring(0, maxLength) + "...";
     }
+    return text;
+  };
 
-     fetchTripItems();
-   }, [id]);
+  useEffect(() => {
+    const fetchTripItems = async () => {
+      try {
+        const res = await fetch(`${apiUrl}/trips/view/${id}`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        });
 
-   if (isLoading) {
-     return (
-       <div className="overlay">
-         <div className="spinner"></div>
-         <div className="loading-text">Loading, please wait...</div>
-       </div>
-     );
-   }
+        const data = await res.json();
+
+        if (data.error) {
+          throw new Error(data.error);
+        }
+
+        setTripData(data.trip);
+      } catch (error) {
+        setError(error.message || "Unable to fetch travel data");
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchTripItems();
+  }, [id]);
+
+  if (isLoading) {
+    return (
+      <div className="overlay">
+        <div className="spinner"></div>
+        <div className="loading-text">Loading, please wait...</div>
+      </div>
+    );
+  }
 
   return (
     <div className="trip-page">
