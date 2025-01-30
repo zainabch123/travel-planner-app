@@ -7,7 +7,7 @@
 }
 
 .my-trips-heading {
-color: rgb(55, 193, 231);
+color: #6ec9f7;
 }
 
 
@@ -17,7 +17,7 @@ color: rgb(55, 193, 231);
 }
 
 .left-menu a:hover {
-  color: rgb(55, 193, 231);
+  color: #6ec9f7;
 }
 
 .left-menu h2 {
@@ -25,12 +25,12 @@ color: rgb(55, 193, 231);
 }
 
 .left-menu h2:focus {
-  color: rgb(55, 193, 231);
+  color: #6ec9f7;
 }
 
 
 .left-menu a:focus {
-  color: rgb(55, 193, 231);
+  color: #6ec9f7;
   font-weight: 600;
 }
 
