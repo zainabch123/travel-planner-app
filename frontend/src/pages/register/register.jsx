@@ -86,17 +86,21 @@ const Register = () => {
             onChange={handleInput}
           />
           {error && <p className="error">{error}</p>}
-          <button id="signup-button" type="submit" onSubmit={handleSubmit}>
-            Sign Up
-          </button>
+          <div className="button-section">
+            <button id="signup-button" type="submit" onSubmit={handleSubmit}>
+              Sign Up
+            </button>
+          </div>
         </form>
         <div className="login-option">
           <p>Already a user?</p>
-          <Link to={`/login`}>
-            <button id="login-button" type="button">
-              Login In
-            </button>
-          </Link>
+          <div className="button-section">
+            <Link to={`/login`}>
+              <button id="login-button" type="button">
+                Login In
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

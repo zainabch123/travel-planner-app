@@ -65,13 +65,12 @@
   width: 140px;
   border: none;
   cursor: pointer;
+
 }
 
 .card-buttons button:hover {
+  background-color: #6ec9f7;
   color: white;
-  font-weight: 500;
-  background-color: rgb(55, 193, 231, 0.7);
-  border: none;
 }
 
 .card-img .placeholder {

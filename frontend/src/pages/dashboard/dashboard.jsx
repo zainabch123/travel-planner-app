@@ -125,7 +125,7 @@ const Dashboard = () => {
           </button>
           <div className="modal">
             <form onSubmit={handleSubmit}>
-              <h2>Add New Trip</h2>
+              <h1>Add New Trip</h1>
               <label htmlFor="name">Name</label>
               <input
                 type="text"
@@ -170,7 +170,7 @@ const Dashboard = () => {
                 <div className="modal-error-message">{addTripError}</div>
               )}
               <button
-                id="new-trip-form-submit"
+                className="modal-button"
                 type="submit"
                 onSubmit={handleSubmit}
               >

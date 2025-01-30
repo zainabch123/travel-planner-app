@@ -70,11 +70,13 @@ const Login = () => {
             onChange={handleInput}
           />
           {error && <p className="error">{error}</p>}
-          <button id="login-button" type="submit" onSubmit={handleSubmit}>
-            Log In
-          </button>
+          <div className="button-section">
+            <button id="login-button" type="submit" onSubmit={handleSubmit}>
+              Log In
+            </button>
+          </div>
         </form>
-        <div className="login-options">
+        {/* <div className="login-options">
           <p>Or login in with</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -114,14 +116,16 @@ const Login = () => {
               d="M35.785 33.781 36.672 28h-5.547v-3.752c0-1.581.775-3.123 3.26-3.123h2.521v-4.922s-2.288-.39-4.477-.39c-4.568 0-7.554 2.768-7.554 7.78V28h-5.078v5.781h5.078v13.976c2.07.324 4.18.324 6.25 0V33.78h4.66Z"
             />
           </svg>
-        </div>
+        </div> */}
         <div className="signup-option">
           <p>Need an account?</p>
-          <Link to={`/register`}>
-            <button id="signup-button" type="button">
-              Sign Up
-            </button>
-          </Link>
+          <div className="button-section">
+            <Link to={`/register`}>
+              <button id="signup-button" type="button">
+                Sign Up
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

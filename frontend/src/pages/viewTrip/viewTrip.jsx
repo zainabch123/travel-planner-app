@@ -52,7 +52,7 @@ const ViewTrip = () => {
   if (isLoading) {
     return (
       <div className="overlay">
-        <div className="spinner"></div>
+        <div className="view-trip-spinner"></div>
         <div className="loading-text">Loading, please wait...</div>
       </div>
     );
@@ -64,7 +64,11 @@ const ViewTrip = () => {
         <div className="trip-details-section">
           <h1>{tripData.name}</h1>
           <div className="trip-image">
-            <img src={tripData.imgUrl} alt="Trip Image" />
+            {tripData.imgUrl ? (
+              <img src={tripData.imgUrl} alt="Trip Image" />
+            ) : (
+              <div className="placeholder">No Image Available</div>
+            )}
           </div>
           <div className="trip-content">
             <p>Location: {tripData.location}</p>
