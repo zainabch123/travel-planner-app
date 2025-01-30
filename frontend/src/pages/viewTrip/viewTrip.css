@@ -123,8 +123,8 @@ h2 {
   border: 20px solid rgba(0, 0, 0, 0.1);
   border-top:20px solid #6ec9f7;
   border-radius: 50%;
-  width: 140px;
-  height: 140px;
+  width: 100px;
+  height: 100px;
   animation: spin 1s linear infinite;
 }
 

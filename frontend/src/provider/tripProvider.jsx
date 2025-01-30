@@ -88,13 +88,10 @@ const TripProvider = ({ children }) => {
       );
       const data = await res.json();
 
-      console.log(data);
+      // if (data.error) {
+      //   throw new Error(data.error);
+      // }
 
-      if (data.error) {
-        throw new Error(data.error);
-      }
-
-      // setTripData(data.data.data);
       setTripData(data.data);
       return tripData;
 
@@ -103,7 +100,7 @@ const TripProvider = ({ children }) => {
       // setTripData(storedData);
       // return tripData;
     } catch (error) {
-      console.log(error)
+      // console.log(error)
       setSearchError(error.error || "Unable to fetch travel data");
       navigate("/search");
     }
