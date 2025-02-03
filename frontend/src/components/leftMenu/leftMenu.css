@@ -64,3 +64,8 @@ color: #6ec9f7;
   padding-right: 0px; 
 }
 
+@media(max-width:500px) {
+  .left-menu {
+    display: none;
+  }
+}

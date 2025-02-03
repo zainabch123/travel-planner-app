@@ -23,6 +23,11 @@ h2 {
   background:  white;
 }
 
+@media(max-width:500px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
 @font-face {
   font-family: "Geist";
   src: local("GeistBoldBold"),

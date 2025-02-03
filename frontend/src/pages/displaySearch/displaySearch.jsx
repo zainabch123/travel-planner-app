@@ -17,15 +17,19 @@ const DisplaySearch = () => {
     // Scroll to the top of the container whenever tripData changes
     if (scrollableRef.current) {
       scrollableRef.current.scrollTo({
-        top: 0, 
-        behavior: "smooth", 
+        top: 0,
+        behavior: "smooth",
       });
     }
-  }, [tripData]); 
+  }, [tripData]);
 
   const limitText = (text, maxLength) => {
-    if (text.length > maxLength) {
-      return text.substring(0, maxLength) + "...";
+    const screenWidth = window.innerWidth;
+
+    const mobileLimit = screenWidth <= 768 ? 70 : maxLength;
+
+    if (text.length > mobileLimit) {
+      return text.substring(0, mobileLimit) + "...";
     }
     return text;
   };

@@ -3,7 +3,6 @@
   overflow-x: hidden;
   position: relative;
   margin-top: 10px;
-
 }
 
 .planned-trips-wrapper {
@@ -28,20 +27,21 @@
 }
 
 .add-trip-button:hover {
-  color:  #6ec9f7;
+  color: #6ec9f7;
   background-color: white;
-  border: 3px solid  #6ec9f7;
+  border: 3px solid #6ec9f7;
 }
 
 .trip-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 325px));
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   border-radius: 8px;
 }
 
 .trip-card {
   position: relative;
+  width: 300px;
   display: grid;
   border-radius: 12px;
   list-style: none;
@@ -51,7 +51,7 @@
 }
 
 .trip-card:hover {
- background-color: rgb(228, 227, 227, 0.5);
+  background-color: rgb(228, 227, 227, 0.5);
 }
 
 .trip-card img {
@@ -63,7 +63,7 @@
 
 .trip-card .placeholder {
   width: 100%;
-  height: 200px;
+  height: 180px;
   background-color: #f0f0f0;
   border-radius: 8px 8px 0 0;
   display: flex;
@@ -74,7 +74,7 @@
 }
 
 .card-content {
-  padding: 20px 20px 20px 20px;
+  padding: 20px ;
 }
 
 .card-content p {
@@ -109,7 +109,7 @@
 }
 
 .modal-button {
-   width: 150px;
+  width: 150px;
   font-size: 18px;
   padding: 8px;
   border-radius: 12px;
@@ -138,7 +138,7 @@
   backdrop-filter: blur(6px);
   overflow-y: scroll;
   display: flex;
-  justify-content: center;  
+  justify-content: center;
   align-items: center;
 }
 
@@ -155,8 +155,8 @@
     transform: translateY(5px);
   }
   100% {
-     opacity: 1;
-    transform: translateY(0px); 
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 .modal {
@@ -166,12 +166,11 @@
   background-color: white;
   padding: 25px;
   border-radius: 25px;
-    animation: fadeInUpBounce 0.4s forwards ease-in-out; 
-
+  animation: fadeInUpBounce 0.4s forwards ease-in-out;
 }
 
 .close-modal {
-position: absolute;
+  position: absolute;
   top: -5px;
   right: 20px;
   margin-top: 20px;
@@ -193,3 +192,45 @@ position: absolute;
   color: tomato;
 }
 
+@media (max-width: 500px) {
+  .dashboard-page {
+    margin-top: 0px;
+    justify-items: center;
+  }
+
+  .planned-trips {
+    padding: 0px 20px;
+  }
+
+  .trip-cards {
+    width: 350px
+  }
+
+  .trip-card {
+    width: 165px;
+  }
+
+  .trip-card img {
+    height: 130px;
+  }
+  .add-trip-button {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .card-content {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+
+  .trip-dates {
+    font-size: 0.7rem;
+  }
+
+  .trip-card .placeholder {
+    height: 130px;
+    padding: 5px;
+    text-align: center;
+  }
+}

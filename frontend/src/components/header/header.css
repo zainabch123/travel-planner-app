@@ -76,7 +76,7 @@
 }
 
 .user-profile-section {
-  justify-items: end;
+justify-items: end;
 }
 
 .profile-circle {
@@ -149,4 +149,33 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+@media(max-width:500px) {
+  .header-content {
+    padding: 20px;
+  }
+
+  .travel-planner-logo {
+    grid-template-columns: 35px ;
+  }
+
+  .travel-planner-logo h1 {
+    display: none;
+  }
+  .search-bar-wrapper {
+      padding: 0px 15px;
+  }
+
+  #search-bar {
+  width: 100%;
+  padding: 13px;
+  height: 40px;
+}
+
+.profile-circle {
+  width: 42px;
+  height: 42px;
+}
+
 }

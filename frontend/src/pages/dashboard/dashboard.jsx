@@ -87,7 +87,7 @@ const Dashboard = () => {
                     <div className="card-content">
                       <h3>{trip.name}</h3>
                       <p>{trip.location}</p>
-                      <p>
+                      <p className="trip-dates">
                         {trip.startDate
                           ? format(new Date(trip.startDate), "dd-MM-yyyy")
                           : ""}{" "}
