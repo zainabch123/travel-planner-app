@@ -13,6 +13,7 @@ const Login = () => {
     password: "testPassword",
   });
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   function handleInput(event) {
     const { name, value } = event.target;
@@ -23,6 +24,8 @@ const Login = () => {
     event.preventDefault();
 
     const loginUser = async () => {
+          setLoading(true);
+
       try {
         const res = await fetch(apiUrl + "/user/login", {
           method: "POST",
@@ -33,10 +36,12 @@ const Login = () => {
         });
 
         const data = await res.json();
-    
+
+        setLoading(false)
+
         if (data.token) {
           login(data.token, data.user);
-          navigate("/")
+          navigate("/");
         } else {
           setError(data.error);
         }
@@ -71,9 +76,16 @@ const Login = () => {
           />
           {error && <p className="error">{error}</p>}
           <div className="button-section">
+            {loading ? (
+              <button className="login-loading-button"  type="button">
+                <div className="login-spinner"></div>
+              </button>
+            ) : (
             <button id="login-button" type="submit" onSubmit={handleSubmit}>
               Log In
             </button>
+            )}
+          
           </div>
         </form>
         {/* <div className="login-options">

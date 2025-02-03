@@ -4,26 +4,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-    padding: 2rem;
-
+  padding: 2rem;
 }
 
 .login-form {
   display: grid;
-  grid-template-columns: minmax(200px, 450px);
+  grid-template-columns: minmax(200px, 400px);
   background-color: white;
-  padding: 25px;
+  padding: 20px;
   border-radius: 25px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
-  margin: 20px;
+  margin: 10px;
+  margin-top: 20px;
 }
 
 label {
-  font-size: 20px;
+  font-size: 18px;
   color: #555;
   padding: 0px 5px;
 }
@@ -35,7 +35,7 @@ input {
   padding: 15px;
   border-radius: 10px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background-color: rgb(238, 238, 238);
   border: 3px solid rgb(238, 238, 238);
 }
@@ -55,7 +55,7 @@ input:focus {
   font-size: 18px;
   padding: 8px;
   border-radius: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 3px solid #6ec9f7;
   background-color: #6ec9f7;
   color: white;
@@ -81,8 +81,8 @@ input:focus {
 }
 
 .signup-option p {
-  margin: 20px 0px;
-  font-size: 18px;
+  margin: 10px 0px;
+  font-size: 16px;
 }
 
 #signup-button {
@@ -90,7 +90,7 @@ input:focus {
   font-size: 18px;
   padding: 8px;
   border-radius: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 3px solid #6ec9f7;
   background-color: #6ec9f7;
   color: white;
@@ -102,4 +102,37 @@ input:focus {
   background-color: white;
   border: 3px solid #6ec9f7;
   color: #6ec9f7;
+}
+
+
+.login-loading-button {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  width: 150px;
+  height: 49.5px;
+  padding: 8px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 3px solid #6ec9f7;
+}
+
+.login-spinner {
+  border: 7px solid rgba(0, 0, 0, 0.1);
+  border-top: 7px solid #6ec9f7;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
