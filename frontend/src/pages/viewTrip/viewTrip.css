@@ -144,3 +144,79 @@ h2 {
     transform: rotate(360deg);
   }
 }
+
+@media(max-width:500px) {
+  .trip-wrapper {
+  margin: 20px;
+  padding: 10px;
+  margin-top: -5px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 20px;
+
+}
+
+.trip-wrapper h1 {
+  margin: 10px 5px 7px 5px;
+  font-size: 1.5rem;
+}
+
+.trip-details-section {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  margin: 0px;
+  padding: 0px;
+}
+
+.trip-details-section img {
+  padding: 3px;
+  height: 150px;
+  width: 190px;
+  object-fit: cover;
+}
+
+.trip-content {
+  margin: 7px 7px;
+  font-size: 0.87rem;
+}
+.row1 {
+  display: flex;
+  flex-wrap: wrap;
+} 
+
+.hotels-section, .attractions-section, .restaurants-section {
+  padding: 0px;
+  margin: 10px 5px;
+}
+
+.item-card {
+  display: flex;
+  flex-direction: row;
+}
+.item-image img {
+  padding: 3px;
+  width: 130px;
+}
+
+.item-content h3 {
+  font-size: 1rem;
+}
+
+.item-content p {
+  font-size: 0.8rem;
+}
+
+.view-trip-spinner {
+  border: 10px solid rgba(0, 0, 0, 0.1);
+  border-top:10px solid #6ec9f7;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  font-size: 15px;
+  margin-top: 15px;
+}
+}
