@@ -124,7 +124,7 @@ const Dashboard = () => {
             x
           </button>
           <div className="modal">
-            <form onSubmit={handleSubmit}>
+            <form className="add-trip-form" onSubmit={handleSubmit}>
               <h1>Add New Trip</h1>
               <label htmlFor="name">Name</label>
               <input
