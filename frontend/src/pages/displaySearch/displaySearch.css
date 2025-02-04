@@ -66,7 +66,6 @@
   width: 140px;
   border: none;
   cursor: pointer;
-
 }
 
 .card-buttons button:hover {
@@ -87,16 +86,24 @@
 }
 
 .card-panel {
+  display: grid;
   position: absolute;
   z-index: 30;
-  top: 120px;
+  top: 125px;
   right: -70px;
   background-color: white;
-  border: 1px solid #ccc;
-  padding: 20px;
+  padding: 15px;
   border-radius: 8px;
+  border: 3px solid #6ec9f7;
 }
 
+.card-panel h2 {
+  font-size: 1.2rem;
+}
+
+.card-panel a {
+  font-size: 0.9rem;
+}
 .card-text h2 {
   font-size: 20px;
 }
@@ -147,23 +154,80 @@
   }
 }
 
-
-@media(max-width:500px) {
+@media (max-width: 500px) {
   .data-cards {
     margin: 10px;
+    margin-top: -5px;
   }
 
   .data-card {
     display: grid;
     grid-template-columns: 150px 1fr;
-    grid-template-rows: 150px 50px;
-  }
+    grid-template-rows: auto 50px;
+    align-items: center;
+    }
 
   .card-img {
+    grid-row: 1 / span 2;
     height: 150px;
+    padding: 3px;
+  }
+
+  .card-img img {
+    border-radius: 8px;
+  }
+  .card-text {
+    margin-top: 5px;
   }
 
   .card-text h2 {
-    font-family: 5rem;
+    font-size: 1rem;
   }
+
+  .card-text p {
+    margin-top: 3px;
+    font-size: 0.75rem;
+    padding-bottom: 0px;
+  }
+
+  .card-buttons {
+    flex-direction: row;
+  margin-top: 0px;
+  padding: 5px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.card-buttons button {
+  padding: 10px;
+  border-radius: 15px;
+  width: fit-content;
+  font-size: 0.72rem;
+}
+
+.data-rating {
+  display: none;
+}
+
+.card-panel h2 {
+  font-size: 0.9rem;
+}
+.card-panel {
+  padding: 7px;
+  font-size: 0.75rem;
+  top: 15px;
+  right: 5px;
+}
+.card-panel a {
+  font-size: 0.7rem;
+  padding-bottom: 3px;
+}
+
+.added-item-graphic {
+  right: 10px;
+  padding: 7px;
+  font-size: 0.8rem;
+}
+
+
 }

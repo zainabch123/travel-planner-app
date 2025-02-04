@@ -208,10 +208,10 @@
 
   .trip-card {
     width: 165px;
-  }
+    }
 
   .trip-card img {
-    height: 130px;
+    height: 110px;
   }
   .add-trip-button {
     bottom: 20px;
@@ -223,13 +223,18 @@
     font-size: 0.9rem;
   }
 
-
+  .card-content p {
+    margin-bottom: 5px;
+  }
   .trip-dates {
-    font-size: 0.7rem;
+    font-size: 0.7rem; 
+    color: rgb(149, 149, 149);
   }
 
+
+
   .trip-card .placeholder {
-    height: 130px;
+    height: 110px;
     padding: 5px;
     text-align: center;
   }

@@ -26,7 +26,7 @@ const DisplaySearch = () => {
   const limitText = (text, maxLength) => {
     const screenWidth = window.innerWidth;
 
-    const mobileLimit = screenWidth <= 768 ? 70 : maxLength;
+    const mobileLimit = screenWidth <= 500 ? 70 : maxLength;
 
     if (text.length > mobileLimit) {
       return text.substring(0, mobileLimit) + "...";
@@ -88,12 +88,12 @@ const DisplaySearch = () => {
                   {data.description && (
                     <p>{limitText(data.description, 200)}</p>
                   )}
-                  {data.rating && <p>Rating: {data.rating}</p>}
+                  {data.rating && <p className="data-rating">Rating: {data.rating}</p>}
                 </div>
                 <div className="card-buttons">
-                  <button>View More Details</button>
+                  <button>View More</button>
                   <button type="button" onClick={() => handleOnClick(index)}>
-                    Add To My Trip
+                    Add To My Trips
                   </button>
                 </div>
 

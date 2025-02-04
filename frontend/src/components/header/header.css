@@ -178,4 +178,15 @@ justify-items: end;
   height: 42px;
 }
 
+.user-panel {
+  right: 50px;
+  top: 75px;
+  padding: 5px;
+}
+
+
+.user-panel p {
+  margin: 5px;
+  font-size: 13px;
+}
 }
