@@ -72,11 +72,11 @@
 
 #search-query-submit:hover {
   stroke: #6ec9f7;
-  fill: #6ec9f7;cd
+  fill: #6ec9f7;
 }
 
 .user-profile-section {
-justify-items: end;
+  justify-items: end;
 }
 
 .profile-circle {
@@ -130,6 +130,7 @@ justify-items: end;
   border: 0;
   background-color: rgb(238, 238, 238);
   justify-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 
@@ -151,42 +152,41 @@ justify-items: end;
   }
 }
 
-@media(max-width:500px) {
+@media (max-width: 500px) {
   .header-content {
     padding: 20px;
   }
 
   .travel-planner-logo {
-    grid-template-columns: 35px ;
+    grid-template-columns: 35px;
   }
 
   .travel-planner-logo h1 {
     display: none;
   }
   .search-bar-wrapper {
-      padding: 0px 15px;
+    padding: 0px 15px;
   }
 
   #search-bar {
-  width: 100%;
-  padding: 13px;
-  height: 40px;
-}
+    width: 100%;
+    padding: 13px;
+    height: 40px;
+  }
 
-.profile-circle {
-  width: 42px;
-  height: 42px;
-}
+  .profile-circle {
+    width: 42px;
+    height: 42px;
+  }
 
-.user-panel {
-  right: 50px;
-  top: 75px;
-  padding: 5px;
-}
+  .user-panel {
+    right: 50px;
+    top: 75px;
+    padding: 5px;
+  }
 
-
-.user-panel p {
-  margin: 5px;
-  font-size: 13px;
-}
+  .user-panel p {
+    margin: 5px;
+    font-size: 13px;
+  }
 }
